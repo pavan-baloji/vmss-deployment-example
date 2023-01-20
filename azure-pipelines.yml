@@ -29,7 +29,7 @@
   - task: AzureImageBuilderTask@1
     displayName: 'Azure VM Image Builder Task'
     inputs:
-      managedIdentity: '/subscriptions/4e2168b6-f328-4246-ae45-1d2dc52f520c/resourcegroups/myVMSSResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myVMSSIdentity'
+      managedIdentity: '/subscriptions/e118c300-d0dc-4ef7-8e1a-29dc1a17167a/resourcegroups/myVMSSResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myVMSSIdentity'
       imageSource: 'marketplace'
       packagePath: '$(System.DefaultWorkingDirectory)/pipeline-artifacts'
       inlineScript: |
@@ -40,8 +40,8 @@
         sudo sh install.sh
       storageAccountName: 'vmssstorageaccount001'
       distributeType: 'sig'
-      galleryImageId: '/subscriptions/4e2168b6-f328-4246-ae45-1d2dc52f520c/resourceGroups/myVMSSResourceGroup/providers/Microsoft.Compute/galleries/myVMSSGallery/images/MyImage/versions/0.0.$(Build.BuildId)'
+      galleryImageId: '/subscriptions/e118c300-d0dc-4ef7-8e1a-29dc1a17167a/resourceGroups/myVMSSResourceGroup/providers/Microsoft.Compute/galleries/myVMSSGallery/images/MyImage/versions/0.0.$(Build.BuildId)'
       replicationRegions: 'eastus2'
-      ibSubscription: '4e2168b6-f328-4246-ae45-1d2dc52f520c'
+      ibSubscription: 'e118c300-d0dc-4ef7-8e1a-29dc1a17167a'
       ibAzureResourceGroup: 'myVMSSResourceGroup'
       ibLocation: 'eastus2'
