@@ -42,6 +42,6 @@
       distributeType: 'sig'
       galleryImageId: '/subscriptions/e118c300-d0dc-4ef7-8e1a-29dc1a17167a/resourceGroups/myVMSSResourceGroup/providers/Microsoft.Compute/galleries/myVMSSGallery/images/MyImage/versions/0.0.$(Build.BuildId)'
       replicationRegions: 'eastus2'
-      ibSubscription: 'e118c300-d0dc-4ef7-8e1a-29dc1a17167a'
+      ibSubscription: 'vmss-deployment'
       ibAzureResourceGroup: 'myVMSSResourceGroup'
       ibLocation: 'eastus2'
