@@ -45,3 +45,9 @@
       ibSubscription: 'DXC-App_Registration'
       ibAzureResourceGroup: 'myVMSSResourceGroup'
       ibLocation: 'eastus2'
+      
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: '`YOUR_SUBSCRIPTION_ID`'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az vmss update --resource-group myVMSSResourceGroup --name vmssScaleSet --set virtualMachineProfile.storageProfile.imageReference.id=/subscriptions/fd9ec759-1a45-42d5-91aa-5423983f4d79/resourceGroups/myVMSSResourceGroup/providers/Microsoft.Compute/galleries/myVMSSGallery/images/MyImage/versions/0.0.$(Build.BuildId)'
